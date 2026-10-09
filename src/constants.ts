@@ -4,7 +4,7 @@ import { CapacitorUpdater } from '@capgo/capacitor-updater';
 import { Preferences } from '@capacitor/preferences';
 
 export const OTA_VERSION = '1.0.265';
-export const APK_VERSION = '1.0.88';
+export const APK_VERSION = '1.0.89';
 export const CLOUDFLARE_AUTH_URL = 'https://entersave-auth.admin-a.workers.dev';
 export const CLOUDFLARE_ATTENDANCE_URL = 'https://entersave-attendance.admin-a.workers.dev';
 
@@ -14,7 +14,7 @@ export const ENABLE_FIREBASE_FALLBACK = false;
 /**
  * مقارنة رقمين بالصيغة X.Y.Z — يعيد true إذا كان A أحدث من B
  */
-const isVerNewer = (a: string, b: string): boolean => {
+export const isVerNewer = (a: string, b: string): boolean => {
   const aParts = a.trim().split('.').map(Number);
   const bParts = b.trim().split('.').map(Number);
   for (let i = 0; i < Math.max(aParts.length, bParts.length); i++) {
